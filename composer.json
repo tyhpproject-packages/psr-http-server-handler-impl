@@ -1,0 +1,43 @@
+{
+    "name": "tyhpdef/psr-http-server-handler-impl",
+    "description": "Implementation package for tyhpdef/psr-http-server-handler. Require tyhpdef/psr-http-server-handler, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "1.0.2.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/psr-http-message": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/psr-http-server-handler"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "psr/http-server-handler": "1.0.2"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/psr-http-message": "@dev"
+    }
+}
